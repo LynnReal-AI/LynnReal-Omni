@@ -23,28 +23,15 @@
 </p>
 
 > [!IMPORTANT]
-> 🔥 **ComfyUI is now supported — Standard *and* Flash!** The Standard four-step workflows
-> (t2v, i2v, r2v, pose2v, v2v) and the **Flash three-step** workflows (t2v, ti2v, ref2v), the
-> node pack they need and every weight they load are in [`comfyui/`](comfyui/) — a 5-second
-> 1344×768 clip **with audio in ~8.4 s on a single H100**, see [ComfyUI](#comfyui).
+> **ComfyUI supports Standard four-step and Flash three-step generation.** Workflows, required
+> nodes and model layout are under [`comfyui/`](comfyui/). For limited VRAM, use the matching
+> Standard Lite or Flash Lite workflow and checkpoint at its shipped step count; see
+> [Recommended models for limited VRAM](#recommended-models-for-limited-vram).
 >
-> ⚡ **Flash Lite is live!** The Flash three-step checkpoint now also ships as
-> `lynnreal_omni_flash_int8_lite.safetensors` — **16.7 GiB instead of 37.0 GiB (−55% on disk,
-> −20.4 GiB of VRAM)**, at the same speed, and at the same seed the same frames as the original
-> Flash. The original checkpoint is unchanged and stays available.
->
-> ⚡ **Standard Lite is live too.** The four-step BF16 checkpoint is **37.6 GiB instead of
-> 61.7 GiB**, and the matching INT8 checkpoint is **20.4 GiB instead of 44.5 GiB**. The five
-> `*_4step_lite.json` workflows preserve the BF16/INT8 switch; at fixed seed all four sampler
-> evaluations are bit-identical to their original checkpoint (`max |Δ| = 0`).
-> **When using a Lite checkpoint, keep the shipped step count: Standard Lite uses 4 steps and
-> Flash Lite uses 3 steps. Other step counts are not validated and may produce different results.**
->
-> **This repository is an early beta and still has known limitations and unfinished features. Bugs, compatibility issues and inconsistent generation quality may remain. Thank you for your patience and understanding as we continue improving it. We plan to release the training code, part of the training data, and a more efficient dit in the future.**
+> This repository is an early beta. Bugs, compatibility issues, unfinished features and
+> inconsistent generation quality may remain.
 
 ## Recommended models for limited VRAM
-
-**显存受限时，强烈推荐 Standard Lite（保质量）和 Flash Lite（极其省显存、极速）。**
 
 **For limited VRAM, we strongly recommend Standard Lite to preserve Standard quality, or
 Flash Lite for a much smaller memory footprint and very fast generation.** Start with the

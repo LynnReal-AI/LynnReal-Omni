@@ -6,7 +6,6 @@ for the pose/hand workflows. **No file under `comfy/` is patched.**
 
 ## Model choice for limited VRAM
 
-**显存受限时，强烈推荐 Standard Lite（保质量）和 Flash Lite（极其省显存、极速）。**
 For limited VRAM, strongly prefer **Standard Lite** for Standard quality or **Flash Lite**
 for a much smaller memory footprint and very fast generation. Use the matching `*_lite.json`
 workflow and checkpoint; keep **4 steps for Standard Lite** and **3 steps for Flash Lite**.

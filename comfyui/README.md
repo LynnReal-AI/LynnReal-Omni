@@ -13,8 +13,6 @@ copying three directories into place is the whole installation.
 
 ## Recommended models for limited VRAM
 
-**显存受限时，强烈推荐 Standard Lite（保质量）和 Flash Lite（极其省显存、极速）。**
-
 **For limited VRAM, strongly prefer Standard Lite for Standard quality, or Flash Lite for
 a much smaller memory footprint and very fast generation.** Choose the matching Lite workflow
 and checkpoint below when setting up a memory-constrained GPU.
