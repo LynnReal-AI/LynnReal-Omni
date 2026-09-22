@@ -23,7 +23,7 @@
 </p>
 
 > [!IMPORTANT]
-> **ComfyUI supports Standard four-step and Flash three-step generation.** Workflows, required
+> 🔥 **ComfyUI supports Standard four-step and Flash three-step generation.** Workflows, required
 > nodes and model layout are under [`comfyui/`](comfyui/). For limited VRAM, use the matching
 > Standard Lite or Flash Lite workflow and checkpoint at its shipped step count; see
 > [Recommended models for limited VRAM](#recommended-models-for-limited-vram).
