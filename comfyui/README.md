@@ -11,6 +11,24 @@ copying three directories into place is the whole installation.
 > the same sample in both engines (different noise source and decoder path). We keep improving
 > it — issues and pull requests are very welcome.
 
+## Recommended models for limited VRAM
+
+**显存受限时，强烈推荐 Standard Lite（保质量）和 Flash Lite（极其省显存、极速）。**
+
+**For limited VRAM, strongly prefer Standard Lite for Standard quality, or Flash Lite for
+a much smaller memory footprint and very fast generation.** Choose the matching Lite workflow
+and checkpoint below when setting up a memory-constrained GPU.
+
+| Priority | Recommended workflow | DiT checkpoint |
+| --- | --- | --- |
+| Preserve Standard quality | `*_4step_lite.json`, **4 steps** | `lynnreal_omni_standard_bf16_lite.safetensors` (**37.6 GiB**) or `lynnreal_omni_standard_int8_lite.safetensors` (**20.4 GiB**) via the INT8 switch |
+| Minimize memory and generate quickly | `*_flash_3_step_lite.json`, **3 steps** | `lynnreal_omni_flash_int8_lite.safetensors` (**16.7 GiB**), with the Light VAE |
+
+At the shipped step counts, Lite preserves its corresponding original checkpoint's tested
+outputs. Flash Lite retains Flash speed; Lite itself primarily saves memory. The sizes above
+are DiT files, not total runtime VRAM: the encoder, VAEs and intermediate tensors also need
+memory. Install the current `ComfyUI-LynnReal` node pack alongside the Lite workflow.
+
 ## Layout
 
 ```

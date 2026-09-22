@@ -42,6 +42,24 @@
 >
 > **This repository is an early beta and still has known limitations and unfinished features. Bugs, compatibility issues and inconsistent generation quality may remain. Thank you for your patience and understanding as we continue improving it. We plan to release the training code, part of the training data, and a more efficient dit in the future.**
 
+## Recommended models for limited VRAM
+
+**显存受限时，强烈推荐 Standard Lite（保质量）和 Flash Lite（极其省显存、极速）。**
+
+**For limited VRAM, we strongly recommend Standard Lite to preserve Standard quality, or
+Flash Lite for a much smaller memory footprint and very fast generation.** Start with the
+matching Lite checkpoint and `*_lite.json` ComfyUI workflow when choosing a memory-saving setup.
+
+- **Standard Lite · quality first:** BF16 Lite is **37.6 GiB**; INT8 Lite is **20.4 GiB**.
+  At the shipped **4 steps**, each preserves its corresponding original checkpoint's tested
+  outputs; the BF16/INT8 switch remains available.
+- **Flash Lite · memory and speed first:** the INT8 DiT is **16.7 GiB**, paired with the Light
+  VAE and shipped **3-step** workflows. It retains Flash's fast generation and tested quality;
+  Lite reduces the checkpoint footprint rather than promising extra speed over full Flash.
+
+These are DiT file sizes, not total runtime VRAM requirements. See the
+[ComfyUI Lite setup and checkpoints](comfyui/README.md#recommended-models-for-limited-vram).
+
 ## Paper
 
 > [LynnReal-Omni: Native multi-modal Video Generation for Agentic Visual Workflows](https://arxiv.org/abs/2609.15863)  

@@ -4,6 +4,16 @@ Everything the LynnReal release needs from ComfyUI that is not core: the Flash t
 compression, the Light VAE loader, the INT8 backend helper and the aligned-reference node
 for the pose/hand workflows. **No file under `comfy/` is patched.**
 
+## Model choice for limited VRAM
+
+**显存受限时，强烈推荐 Standard Lite（保质量）和 Flash Lite（极其省显存、极速）。**
+For limited VRAM, strongly prefer **Standard Lite** for Standard quality or **Flash Lite**
+for a much smaller memory footprint and very fast generation. Use the matching `*_lite.json`
+workflow and checkpoint; keep **4 steps for Standard Lite** and **3 steps for Flash Lite**.
+Lite preserves its corresponding original checkpoint's tested outputs at these step counts.
+See the [ComfyUI model selection guide](../../README.md#recommended-models-for-limited-vram)
+for checkpoint names and sizes.
+
 ## Install
 
 ```bash
